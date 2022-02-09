@@ -1,33 +1,44 @@
-const tr = document.getElementById("tr");
-const td = document.getElementById("data");
-// lets get the body
-const tableBody = document.getElementById("tableBody");
-function taskMaker(rows){
-    rows.appendChild(sl());
+let data = document.getElementById("dat");
+let input = document.getElementById("inputText");
+let tableBody = document.getElementById("tableBody");
+let count = 0;
+data.addEventListener("click", function(){
+  let singleTask = document.createElement("tr");
+    tableBody.appendChild(trMaker(singleTask));
+    
+});
+function trMaker(rows){
+    rows.appendChild(slNumber());
     rows.appendChild(taskName());
-    rows.appendChild(taskStatus());
+    rows.appendChild(statusTask());
     return rows;
 }
-function sl(){
-    let serial = document.createElement("td");
-    serial.innerText = "1";
-    serial.classList = "px-12 py-2 bg-purple-200  text-2xl font-semibold";
-    return serial;
+
+
+function slNumber(){
+    let sl = document.createElement("td");
+    count++;
+    sl.innerText = count;
+    sl.classList = "px-4 py-4 bg-purple-200  text-xl font-semibold";
+    
+    return sl;
 }
 function taskName(){
-    let task = document.createElement("td");
-    task.innerText =  "do something new";
-    task.classList = "px-auto py-auto bg-purple-200  text-lg font-regular";
-    return task;
+    let sl = document.createElement("td");
+    sl.innerText = input.value;
+    sl.classList = "px-4 py-4 bg-purple-200  text-xl font-semibold";
+    input.value = "";
+    return sl;
 }
-function taskStatus(){
-    let task = document.createElement("td");
-    task.innerText =  "done";
-    task.classList = "px-auto py-auto bg-purple-200  text-xl font-bold";
-    return task;
+function statusTask(){
+    let sl = document.createElement("td");
+    sl.innerText = "unfinished";
+    sl.classList = "px-4 py-4  bg-red-200 text-red text-xl font-semibold";
+    return sl;
+
 }
-td.addEventListener("click", function(){
-    
-let singleTask = document.createElement("tr");
-   tableBody.appendChild(taskMaker(singleTask));
-});
+
+
+
+
+

@@ -6,16 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>basic to do list</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <h1 class="my-4 text-center text-purple-500 font-bold text-6xl ">To do list</h1>
+    <h1 id="dat" class="my-4 text-center text-purple-500 font-bold text-6xl">To do list</h1>
+    <div class="flex w-full">
+    
+        <input type="text" name="" placeholder="kisu ekta den"
+            class="text-right border-2 border-purple-600  rounded-md w-64 h-16 text-sm p-4 mx-auto my-4 " id="inputText">
+    </div>
 
-    <table class="table-auto mx-auto">
+    <table class="table-auto mx-auto ">
         <thead>
            <tr id="tr" class="">
-            <td id="data" class="px-12 py-2 bg-purple-200 text-2xl font-semibold border-b-2 border-purple-600" >Sl. </td>
+            <td class="px-12 py-2 bg-purple-200 text-2xl font-semibold border-b-2 border-purple-600">Sl. </td>
             <td  class="px-20 py-2  bg-purple-200 text-2xl font-semibold border-b-2 border-purple-600" >Taskname </td>
             <td  class="px-12 py-2  bg-purple-200 text-2xl font-semibold border-b-2 border-purple-600" >Status </td>
            </tr>
@@ -25,6 +29,7 @@
         </tbody>
     </table>
     <script src="app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 
 </html>
