@@ -5,7 +5,11 @@ let count = 0;
 
 
 data.addEventListener("click", function(){
-  let singleTask = document.createElement("tr");
+  if(input.value == ""){
+    alert("Oh no! you forget to put the task name!");
+  }
+  else{
+    let singleTask = document.createElement("tr");
     tableBody.appendChild(trMaker(singleTask));
     let gans  = document.getElementsByClassName("finished");
     for(let gan of gans){
@@ -15,6 +19,7 @@ data.addEventListener("click", function(){
         });
     }
     
+  }
 });
 function trMaker(rows){
     rows.appendChild(slNumber());
