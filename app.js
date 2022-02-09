@@ -28,23 +28,23 @@ function slNumber(){
     let sl = document.createElement("td");
     count++;
     sl.innerText = count;
-    sl.classList = "px-4 py-4 bg-orange-200  text-xl font-semibold text-center";
+    sl.classList = "px-4 py-4 bg-cyan-200 text-cyan-800 border-b-2 border-cyan-600 text-xl font-semibold text-center";
     
     return sl;
 }
 function taskName(){
     let sl = document.createElement("td");
     sl.innerText = input.value;
-    sl.classList = "px-4 py-4 bg-orange-200  text-xl font-semibold";
+    sl.classList = "px-4 py-4 bg-cyan-200 border-b-2 border-cyan-600 text-cyan-800 text-md ";
     input.value = "";
     return sl;
 }
 function statusTask(){
     let sl = document.createElement("td");
     sl.innerHTML = `
-    <span class="bg-red-400 px-3 py-1 rounded-full text-red-800 font-semibold finished"  >unfinished</span>
+    <span class="bg-red-400 px-3 border-0 py-1 rounded-full text-red-800 font-semibold finished"  >unfinished</span>
     `;
-    sl.classList = " flex items-center justify-center  bg-orange-200 py-4 ";
+    sl.classList = " flex items-center justify-center border-b-2 border-cyan-600 bg-cyan-200 py-5";
     return sl;
 
 }
